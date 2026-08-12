@@ -1,0 +1,45 @@
+@import "tailwindcss";
+@import "@fortawesome/fontawesome-svg-core/styles.css";
+
+@theme {  
+ --color-moss-900: #202b1d;
+  --color-moss-800: #2c3a27;
+  --color-moss-700: #3f5237;
+  --color-moss-600: #526b49;
+  --color-moss-500: #6c8462;
+  --color-moss-100: #e3e9dd;
+
+  --color-sand-50: #faf7f0;
+  --color-sand-100: #f3ede0;
+  --color-sand-200: #e9dfc9;
+
+  --color-clay-600: #b1552f;
+  --color-clay-500: #c76a3f;
+  --color-clay-400: #d98455;
+
+  --color-gold-500: #c68a3c;
+  --color-gold-400: #d9a75e;
+
+  --color-ink-900: #211f1a;
+  --color-ink-700: #4a453c;
+
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-sand-50);
+    
+  }
+}
+
+@layer utilities {
+
+  .container-custom {
+    @apply mx-auto max-w-7xl px-6 py-20 md:px-8 md:py-24
+  }
+
+}
