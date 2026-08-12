@@ -1,13 +1,7 @@
 <script setup lang="ts">
 const open = ref(false);
 
-const links = [
-  { label: "Home", to: "/" },
-  { label: "Über uns", to: "/ueber-uns" },
-  { label: "Leistungen", to: "/leistungen" },
-  { label: "Öffnungszeiten", to: "/oeffnungszeiten" },
-  { label: "Kontakt", to: "/kontakt" },
-];
+const links = navLinks;
 
 const phone = "+49123456789";
 const phoneLabel = "01234 / 56 78 90";
@@ -50,7 +44,7 @@ onUnmounted(() => {
           <span class="font-display text-xl font-semibold tracking-tight"
             >My App</span
           >
-          <span class="eyebrow-tag mt-0.5 text-ink-700/60">Hundesalon</span>
+          <span class="eyebrow-tag mt-0.5 text-ink-700/60"></span>
         </span>
       </NuxtLink>
 

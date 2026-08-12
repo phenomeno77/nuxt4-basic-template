@@ -1,6 +1,12 @@
 <script setup lang="ts">
-import SocialMedia from "./SocialMedia.vue";
+const explore = navLinks;
 const year = new Date().getFullYear();
+
+const legal = [
+  { label: "Impressum", to: "/impressum" },
+  { label: "AGB", to: "/agb" },
+  { label: "Datenschutz", to: "/datenschutz" },
+];
 </script>
 
 <template>
@@ -20,6 +26,54 @@ const year = new Date().getFullYear();
         <div class="mt-6 flex items-center gap-3">
           <SocialMedia />
         </div>
+      </div>
+
+      <!-- Explore -->
+      <nav aria-labelledby="footer-explore">
+        <p id="footer-explore" class="eyebrow-tag text-gold-400">Entdecken</p>
+        <ul class="mt-4 space-y-2.5 text-sm text-moss-100/85">
+          <li v-for="item in explore" :key="item.to">
+            <NuxtLink
+              :to="item.to"
+              class="inline-flex items-center gap-2 transition-colors hover:text-sand-50"
+            >
+              {{ item.label }}
+            </NuxtLink>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Legal -->
+      <nav aria-labelledby="footer-legal">
+        <p id="footer-legal" class="eyebrow-tag text-gold-400">Rechtliches</p>
+        <ul class="mt-4 space-y-2.5 text-sm text-moss-100/85">
+          <li v-for="item in legal" :key="item.to">
+            <NuxtLink
+              :to="item.to"
+              class="transition-colors hover:text-sand-50"
+            >
+              {{ item.label }}
+            </NuxtLink>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Kontakt -->
+      <div>
+        <p class="eyebrow-tag text-gold-400">Kontakt</p>
+
+        <address class="mt-4 space-y-1 text-sm not-italic text-moss-100/85">
+          <p>Musterstraße 12</p>
+          <p>12345 Musterstadt</p>
+        </address>
+
+        <a
+          href="tel:+49123456789"
+          class="mt-4 inline-flex items-center gap-2.5 text-sm font-semibold text-sand-50 transition-colors hover:text-gold-400"
+        >
+          <FontAwesomeIcon :icon="['fas', 'phone']" class="text-gold-400" />
+          01234 / 56 78 90
+        </a>
       </div>
     </div>
 

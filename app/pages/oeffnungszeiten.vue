@@ -1,7 +1,17 @@
+<script lang="ts" setup>
+useHead({
+  title: "Öffnungszeiten - My App in Musterstadt",
+  meta: [
+    {
+      name: "description",
+      content: "My App in Musterstadt",
+    },
+  ],
+});
+</script>
+
 <template>
-  <div>Öffnungszeiten</div>
+  <div class="container-custom">Öffnungszeiten</div>
 </template>
 
-<script lang="ts" setup></script>
-
-<style></style>
+<style scoped></style>

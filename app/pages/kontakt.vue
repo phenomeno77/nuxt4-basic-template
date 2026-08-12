@@ -1,7 +1,17 @@
+<script lang="ts" setup>
+useHead({
+  title: "Kontakt - My App in Musterstadt",
+  meta: [
+    {
+      name: "description",
+      content: "My App in Musterstadt",
+    },
+  ],
+});
+</script>
+
 <template>
-  <div>Kontank</div>
+  <div class="container-custom">Kontakt</div>
 </template>
 
-<script lang="ts" setup></script>
-
-<style></style>
+<style scoped></style>
