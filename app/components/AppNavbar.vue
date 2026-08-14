@@ -39,7 +39,6 @@ onUnmounted(() => {
         class="flex items-center gap-2.5 text-moss-900"
         aria-label="My App – zur Startseite"
       >
-        <PawMark class="h-8 w-8 shrink-0 text-clay-600" />
         <span class="flex flex-col leading-none">
           <span class="font-display text-xl font-semibold tracking-tight"
             >My App</span
@@ -88,20 +87,8 @@ onUnmounted(() => {
           :aria-label="open ? 'Menü schließen' : 'Menü öffnen'"
           @click="open = !open"
         >
-          <span class="relative flex h-4 w-5 flex-col justify-between">
-            <span
-              class="h-0.5 w-full rounded-full bg-current transition-transform duration-200"
-              :class="open ? 'translate-y-[7px] rotate-45' : ''"
-            />
-            <span
-              class="h-0.5 w-full rounded-full bg-current transition-opacity duration-200"
-              :class="open ? 'opacity-0' : ''"
-            />
-            <span
-              class="h-0.5 w-full rounded-full bg-current transition-transform duration-200"
-              :class="open ? '-translate-y-[7px] -rotate-45' : ''"
-            />
-          </span>
+          <FontAwesomeIcon v-if="!open" :icon="['fas', 'bars']" />
+          <FontAwesomeIcon v-else :icon="['fas', 'xmark']" />
         </button>
       </div>
     </div>
@@ -128,14 +115,6 @@ onUnmounted(() => {
           active-class="bg-moss-100 !text-moss-900 font-semibold"
         >
           {{ link.label }}
-        </NuxtLink>
-
-        <NuxtLink
-          to="/kontakt"
-          class="mt-4 flex items-center justify-center gap-2 rounded-full bg-clay-500 px-5 py-3.5 text-sm font-semibold text-sand-50 shadow-tag"
-        >
-          <FontAwesomeIcon :icon="['fas', 'envelope']" />
-          Termin anfragen
         </NuxtLink>
       </nav>
     </Transition>
