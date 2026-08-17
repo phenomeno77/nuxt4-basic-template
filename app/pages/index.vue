@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import SectionTitle from "~/components/ui/SectionTitle.vue";
+
 useSeoMeta({
   titleTemplate: (title) =>
     title ? `${title} — Meine Seite` : "Meine Seite – irgendwo in Musterstadt",
@@ -17,5 +19,12 @@ useHead({
 </script>
 
 <template>
-  <div class="container-custom">Homepage</div>
+  <div class="container-custom">
+    Homepage
+    <SectionTitle
+      eyebrow="Behind the Art"
+      title="How I Work"
+      description="A quick look at what goes into a finished piece, from first sketch to final render."
+    />
+  </div>
 </template>

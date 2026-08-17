@@ -22,16 +22,6 @@
 
   --color-ink-900: #211f1a;
   --color-ink-700: #4a453c;
-
-
-  /* dark mode */
-
-  --color-bg: #0A0A0F;        /* page background */
-  --color-surface: #16161F;   /* cards, raised areas */
-  --color-border: #26263A;    /* hairline borders */
-  --color-muted: #8B8B9A;     /* secondary text */
-  --color-fg: #ECECF1;        /* primary text — note: NOT pure white */
-  --color-accent: #6366F1;    /* one accent, used sparingly */
 }
 
 @layer base {
